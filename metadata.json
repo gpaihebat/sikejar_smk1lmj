@@ -1,0 +1,6 @@
+{
+  "name": "SIKEJAR",
+  "description": "Sistem Kehadiran dan Jurnal Mengajar (SIKEJAR) untuk mengelola kehadiran siswa dan jurnal mengajar guru dengan rekap bulanan otomatis, ekspor PDF/Excel, dan database Google Sheets melalui Apps Script.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

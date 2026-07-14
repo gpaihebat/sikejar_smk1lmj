@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Custom styles for printing */
+@media print {
+  html, body, .dark, .dark body, .dark .bg-white, .dark div, .dark table, .dark th, .dark td, .dark p, .dark span, .dark h1, .dark h2, .dark h3, .dark h4 {
+    background-color: white !important;
+    color: black !important;
+    border-color: black !important;
+  }
+  body {
+    background-color: white !important;
+    color: black !important;
+  }
+  .print-hidden, .print\:hidden {
+    display: none !important;
+  }
+  .print-only, .print\:block {
+    display: block !important;
+  }
+  /* Remove page margin margins on browsers */
+  @page {
+    margin: 1.5cm;
+  }
+}
+
+/* ==========================================================================
+   HIGH-CONTRAST DARK MODE STYLE SYSTEM
+   ========================================================================== */
+
+/* 1. Global Background & Color Overrides */
+.dark, 
+.dark body,
+.dark .bg-slate-50,
+.dark .bg-slate-100 {
+  background-color: #0f172a !important; /* slate-900 */
+  color: #f8fafc !important; /* slate-50 */
+}
+
+/* 2. Card Background overrides */
+.dark .bg-white {
+  background-color: #1e293b !important; /* slate-800 */
+  color: #f8fafc !important;
+}
+
+/* Soft secondary containers and lists */
+.dark .bg-slate-50\/50,
+.dark .bg-slate-50\/70,
+.dark .hover\:bg-slate-50\/50:hover,
+.dark .hover\:bg-slate-50\/70:hover {
+  background-color: rgba(15, 23, 42, 0.45) !important;
+}
+
+/* 3. Text and Typography Legibility Updates */
+.dark .text-slate-900,
+.dark .text-slate-800,
+.dark .text-slate-700,
+.dark .text-slate-600,
+.dark h1, .dark h2, .dark h3, .dark h4 {
+  color: #f8fafc !important;
+}
+
+.dark .text-slate-500,
+.dark .text-slate-400 {
+  color: #94a3b8 !important; /* slate-400 */
+}
+
+/* 4. Form inputs, Textareas, Select lists */
+.dark select,
+.dark input[type="text"],
+.dark input[type="date"],
+.dark input[type="month"],
+.dark textarea {
+  background-color: #0f172a !important; /* slate-900 */
+  color: #f8fafc !important;
+  border-color: #475569 !important; /* slate-600 */
+}
+
+.dark select option {
+  background-color: #1e293b !important; /* slate-800 */
+  color: #f8fafc !important;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: #64748b !important; /* slate-500 */
+}
+
+/* 5. Border System Alignment */
+.dark .border-slate-200,
+.dark .border-slate-100 {
+  border-color: #334155 !important; /* slate-700 */
+}
+
+.dark .divide-slate-100 > :not([hidden]) ~ :not([hidden]) {
+  border-color: #334155 !important;
+}
+
+/* 6. Navigation items and active states */
+.dark .text-slate-600.hover\:text-slate-900:hover {
+  color: #ffffff !important;
+  background-color: #334155 !important;
+}
+
+.dark .bg-slate-900 {
+  background-color: #0f172a !important;
+}
+
+.dark .hover\:bg-slate-50:hover {
+  background-color: #334155 !important;
+}
+
+/* 7. Special Container Badges & Colors */
+.dark .bg-emerald-50,
+.dark .bg-emerald-50\/20,
+.dark .bg-emerald-50\/50 {
+  background-color: rgba(16, 185, 129, 0.15) !important;
+}
+.dark .text-emerald-700,
+.dark .text-emerald-800,
+.dark .text-emerald-600 {
+  color: #34d399 !important; /* bright emerald-400 */
+}
+.dark .border-emerald-200 {
+  border-color: rgba(16, 185, 129, 0.3) !important;
+}
+
+.dark .bg-blue-50,
+.dark .bg-blue-50\/20,
+.dark .bg-blue-50\/50 {
+  background-color: rgba(59, 130, 246, 0.15) !important;
+}
+.dark .text-blue-700,
+.dark .text-blue-800,
+.dark .text-blue-600 {
+  color: #60a5fa !important; /* bright blue-400 */
+}
+.dark .border-blue-200 {
+  border-color: rgba(59, 130, 246, 0.3) !important;
+}
+
+.dark .bg-amber-50,
+.dark .bg-amber-50\/20,
+.dark .bg-amber-50\/50,
+.dark .bg-amber-50\/50 {
+  background-color: rgba(245, 158, 11, 0.15) !important;
+}
+.dark .text-amber-700,
+.dark .text-amber-800,
+.dark .text-amber-600 {
+  color: #fbbf24 !important; /* bright amber-400 */
+}
+.dark .border-amber-100,
+.dark .border-amber-200 {
+  border-color: rgba(245, 158, 11, 0.3) !important;
+}
+
+.dark .bg-rose-50,
+.dark .bg-rose-50\/20,
+.dark .bg-rose-50\/50 {
+  background-color: rgba(244, 63, 94, 0.15) !important;
+}
+.dark .text-rose-700,
+.dark .text-rose-800,
+.dark .text-rose-600 {
+  color: #fca5a5 !important; /* bright rose-300 */
+}
+.dark .border-rose-100,
+.dark .border-rose-200 {
+  border-color: rgba(244, 63, 94, 0.3) !important;
+}
+
+.dark .bg-indigo-50,
+.dark .bg-indigo-50\/50,
+.dark .bg-indigo-50\/20 {
+  background-color: rgba(99, 102, 241, 0.15) !important;
+}
+.dark .text-indigo-700,
+.dark .text-indigo-800,
+.dark .text-indigo-900,
+.dark .text-indigo-600 {
+  color: #818cf8 !important; /* bright indigo-400 */
+}
+.dark .border-indigo-100 {
+  border-color: rgba(99, 102, 241, 0.3) !important;
+}
+
+/* 8. Table Specific Sticky Header and column classes */
+.dark th.sticky, 
+.dark td.sticky {
+  background-color: #1e293b !important; /* slate-800 */
+  color: #f8fafc !important;
+}
+.dark thead, 
+.dark thead th {
+  background-color: #0f172a !important; /* slate-900 */
+  color: #f8fafc !important;
+}
+
+.dark .shadow-\[2px_0_5px_-2px_rgba\(0\,0\,0\,0\.1\)\] {
+  box-shadow: 2px 0 5px -2px rgba(255, 255, 255, 0.05) !important;
+}
+
+/* 9. Scrollbar styling */
+.dark ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.dark ::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+
